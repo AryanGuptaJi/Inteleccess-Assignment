@@ -1,0 +1,13 @@
+<Relationships>
+  <OneToManyRelationship Name="new_account_customerpreferences" SchemaName="new_account_customerpreferences" 
+    ReferencedEntity="account" ReferencingEntity="new_customerpreferences">
+    <CascadeConfiguration>
+      <CascadeAssign Value="NoCascade" />
+      <CascadeDelete Value="NoCascade" />
+      <CascadeMerge Value="NoCascade" />
+      <CascadeReparent Value="NoCascade" />
+      <CascadeShare Value="NoCascade" />
+      <CascadeUnshare Value="NoCascade" />
+    </CascadeConfiguration>
+  </OneToManyRelationship>
+</Relationships>

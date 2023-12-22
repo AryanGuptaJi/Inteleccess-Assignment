@@ -1,0 +1,45 @@
+<Entities>
+  <Entity Name="new_customerpreferences">
+    <DisplayName>Customer Preferences</DisplayName>
+    <DisplayCollectionName>Customer Preferences</DisplayCollectionName>
+    <Description>Entity to store customer preferences</Description>
+    <OwnershipType>UserOwned</OwnershipType>
+    <IsActivity>false</IsActivity>
+    <SchemaName>new_customerpreferences</SchemaName>
+
+    <Attributes>
+      <Attribute Name="new_customername" DisplayName="Customer Name" Type="SingleLine.Text" RequiredLevel="ApplicationRequired" />
+      <Attribute Name="new_preferencetype" DisplayName="Preference Type" Type="SingleLine.Text" RequiredLevel="ApplicationRequired" />
+      <Attribute Name="new_description" DisplayName="Description" Type="SingleLine.Text" RequiredLevel="ApplicationRequired" />
+    </Attributes>
+
+    <Forms>
+      <Form Type="Main" IsDefault="1" Id="abc" Layout="Sales">
+        <Tabs>
+          <Tab Name="General" Id="tab1">
+            <Sections>
+              <Section Name="BasicInformation" Id="section1">
+                <Rows>
+                  <Row>
+                    <Cell id="cell1" labels="1" control="field1" showlabel="true" locklevel="0" />
+                  </Row>
+                </Rows>
+              </Section>
+            </Sections>
+          </Tab>
+          <Tab Name="Preferences" Id="tab2">
+            <Sections>
+              <Section Name="Preferences" Id="section2">
+                <Rows>
+                  <Row>
+                    <Cell id="cell1" labels="1" control="field1" showlabel="true" locklevel="0" />
+                  </Row>
+                </Rows>
+              </Section>
+            </Sections>
+          </Tab>
+        </Tabs>
+      </Form>
+    </Forms>
+  </Entity>
+</Entities>

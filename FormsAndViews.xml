@@ -1,0 +1,46 @@
+<Forms>
+  <Form Type="Main" IsDefault="1" Id="{98765432-10FE-DCBA-9876-543210FEDCBA}" Layout="Sales">
+    <Tabs>
+      <Tab Name="General" Id="tab1">
+        <Sections>
+          <Section Name="BasicInformation" Id="section1">
+            <Rows>
+              <Row>
+                <Cell id="{ABCDEF01-2345-6789-ABCD-EF0123456789}" labels="1" control="field1" showlabel="true" locklevel="0" />
+              </Row>
+            </Rows>
+          </Section>
+        </Sections>
+      </Tab>
+      <Tab Name="Preferences" Id="tab2">
+        <Sections>
+          <Section Name="Preferences" Id="{98765432-10FE-DCBA-9876-543210FEDCBA}">
+            <Rows>
+              <Row>
+                <Cell id="{ABCDEF01-2345-6789-ABCD-EF0123456789}" labels="1" control="field1" showlabel="true" locklevel="0" />
+              </Row>
+            </Rows>
+          </Section>
+        </Sections>
+      </Tab>
+    </Tabs>
+  </Form>
+</Forms>
+
+<Views>
+  <View Name="Active Accounts with Preferences" Id="abc">
+    <FetchXml>
+      <!-- Add your FetchXML query to retrieve accounts with preferences -->
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+        <entity name="account">
+          <attribute name="name" />
+          <attribute name="accountid" />
+          <link-entity name="new_customerpreferences" from="accountid" to="accountid" link-type="outer" alias="preferences">
+            <attribute name="new_preferencetype" />
+            <attribute name="new_description" />
+          </link-entity>
+        </entity>
+      </fetch>
+    </FetchXml>
+  </View>
+</Views>

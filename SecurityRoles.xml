@@ -1,0 +1,15 @@
+<SecurityRoles>
+  <SecurityRole Name="Salesperson">
+    <EntityPrivileges>
+      <Entity Name="new_customerpreferences">
+        <Privileges>
+          <Privilege Name="prvReadNew_CustomerPreferences" />
+          <Privilege Name="prvWriteNew_CustomerPreferences" />
+          <Privilege Name="prvCreateNew_CustomerPreferences" />
+          <Privilege Name="prvAppendNew_CustomerPreferences" />
+          <Privilege Name="prvAppendToNew_CustomerPreferences" />
+        </Privileges>
+      </Entity>
+    </EntityPrivileges>
+  </SecurityRole>
+</SecurityRoles>
